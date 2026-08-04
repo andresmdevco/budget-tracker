@@ -1,6 +1,7 @@
 export type BudgetActions =
   | { type: 'add-budget'; payload: { budget: number } }
-  | { type: 'show-modal' };
+  | { type: 'show-modal' }
+  | { type: 'close-modal' };
 
 export type BudgetState = {
   budget: number;
@@ -27,5 +28,12 @@ export const budgetReducer = (state: BudgetState = initialState, action: BudgetA
     };
   }
 
+   if (action.type === 'close-modal') {
+    return {
+      ...state,
+      modal: false,
+    };
+  }
+  
   return state;
 };
