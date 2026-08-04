@@ -14,6 +14,8 @@
     "@heroicons/react": "^2.2.0",
     "@tailwindcss/vite": "^4.3.3",
     "react": "^19.2.8",
+    "react-calendar": "^6.0.1",
+    "react-date-picker": "^12.1.0",
     "react-dom": "^19.2.8",
     "tailwindcss": "^4.3.3"
   },
