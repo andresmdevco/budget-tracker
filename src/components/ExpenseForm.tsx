@@ -15,8 +15,8 @@ export default function ExpenseForm() {
     date: new Date(),
   });
 
-  const [error, setError] = useState('')
-  const { dispatch } = useBudget()
+  const [error, setError] = useState('');
+  const { dispatch } = useBudget();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -39,12 +39,20 @@ export default function ExpenseForm() {
 
     // validar
     if (Object.values(expense).includes('')) {
-      setError('Todos los campos son obligatorios')
+      setError('Todos los campos son obligatorios');
       return;
     }
 
     // Agregar un nuevo gasto
-    dispatch({ type: 'add-expense', payload: { expense } })
+    dispatch({ type: 'add-expense', payload: { expense } });
+
+    // reiniciar el state
+    setExpense({
+      amount: 0,
+      expenseName: '',
+      category: '',
+      date: new Date(),
+    });
   };
 
   return (
@@ -66,6 +74,7 @@ export default function ExpenseForm() {
           className="bg-slate-100 p-2"
           name="expenseName"
           onChange={handleChange}
+          value={expense.expenseName}
         />
       </div>
 
@@ -80,6 +89,7 @@ export default function ExpenseForm() {
           className="bg-slate-100 p-2"
           name="amount"
           onChange={handleChange}
+          value={expense.amount}
         />
       </div>
 
@@ -87,7 +97,7 @@ export default function ExpenseForm() {
         <label htmlFor="category" className="text-xl">
           Categoría:
         </label>
-        <select id="category" className="bg-slate-100 p-2" name="category" onChange={handleChange}>
+        <select id="category" className="bg-slate-100 p-2" name="category" onChange={handleChange} value={expense.category}>
           <option value="">-- Seleccione --</option>
           {categories.map((category) => (
             <option key={category.id} value={category.id}>
