@@ -1,4 +1,4 @@
-import { useState, type ChangeEvent, type SubmitEvent } from 'react';
+import { useEffect, useState, type ChangeEvent, type SubmitEvent } from 'react';
 import type { DraftExpense, Value } from '../types';
 import { categories } from '../data/categories';
 import DatePicker from 'react-date-picker';
@@ -16,7 +16,16 @@ export default function ExpenseForm() {
   });
 
   const [error, setError] = useState('');
-  const { dispatch } = useBudget();
+  const { dispatch, state } = useBudget();
+
+  useEffect(() => {
+    if (state.editingId) {
+      const editingExpense = state.expenses.filter(
+        (currentExpense) => currentExpense.id === state.editingId,
+      )[0];
+      setExpense(editingExpense);
+    }
+  }, [state.editingId, state.expenses]);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -97,7 +106,13 @@ export default function ExpenseForm() {
         <label htmlFor="category" className="text-xl">
           Categoría:
         </label>
-        <select id="category" className="bg-slate-100 p-2" name="category" onChange={handleChange} value={expense.category}>
+        <select
+          id="category"
+          className="bg-slate-100 p-2"
+          name="category"
+          onChange={handleChange}
+          value={expense.category}
+        >
           <option value="">-- Seleccione --</option>
           {categories.map((category) => (
             <option key={category.id} value={category.id}>
