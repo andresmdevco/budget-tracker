@@ -7,12 +7,14 @@ Planificador de gastos construido con **React**, **TypeScript** y **Tailwind CSS
 
 
 ## 🛠️ Tecnologías Utilizadas
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Context-API](https://img.shields.io/badge/Context--Api-000000?style=for-the-badge&logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-- React 19
-- Tailwind CSS 4
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+
+- **React 19**
+- **Tailwind CSS 4**
 Además:
 - **react-circular-progressbar** — barra de progreso circular para visualizar el % gastado del presupuesto
 - **react-swipeable-list** — acciones de "Actualizar" y "Eliminar" mediante swipe sobre cada gasto
