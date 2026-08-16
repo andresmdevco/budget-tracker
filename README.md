@@ -1,5 +1,5 @@
-# 💰 Budget Tracker
-Planificador de gastos construido con **React**, **TypeScript** y **Tailwind CSS**. Permite definir un presupuesto, registrar gastos por categoría, visualizar el porcentaje consumido con una barra de progreso circular y filtrar el listado de gastos por categoría. Toda la información persiste en el `localStorage` del navegador.
+# 💰 Planificador de Gastos
+Aplicación web de un planificador de gastos construida con **React**, **TypeScript** y **Tailwind CSS**. Permite definir un presupuesto, registrar gastos por categoría, visualizar el porcentaje consumido con una barra de progreso circular y filtrar el listado de gastos por categoría. Toda la información persiste en el `localStorage` del navegador.
 
 
 ## 🌐 Demo
