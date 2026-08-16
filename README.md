@@ -75,7 +75,7 @@ Además:
 10. El botón "Resetear App" dispara `reset-app`, devolviendo el estado a sus valores iniciales.
 
 
-## 📚 Conceptos practicados
+## 📚 Conceptos aplicados
 - Manejo de estado global con **Context API + `useReducer`**, evitando prop drilling.
 - Modelado de acciones con discriminated unions (`BudgetActions`) para tipar `type` y `payload` de forma segura.
 - Custom hook (`useBudget`) que encapsula `useContext` y valida su uso dentro del `Provider` correspondiente.
