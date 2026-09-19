@@ -5,6 +5,8 @@ Aplicación web de un planificador de gastos construida con **React**, **TypeScr
 ## 🌐 Demo
 🔗 [https://budget-tracker-andresmdevco.vercel.app/](https://budget-tracker-andresmdevco.vercel.app/)
 
+## 👀 Vista previa
+https://github.com/user-attachments/assets/1504e3e3-840b-4088-ac7c-7e4c428e3ae4
 
 ## 🛠️ Tecnologías Utilizadas
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
